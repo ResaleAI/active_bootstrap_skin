@@ -113,6 +113,8 @@
 
 #title_bar {
   @extend .clearfix;
+  padding-left: 20px;
+  padding-right: 20px;
 
   #titlebar_left {
     @extend .pull-left;
@@ -145,9 +147,11 @@
 /* Main Content */
 #active_admin_content {
   @extend .row;
+  padding-left: 20px;
+  padding-right: 20px;
 
   &.without_sidebar {
-    #main_content_wrapper { @extend .col-md-6; }
+    #main_content_wrapper { @extend .col-md-12; }
   }
 
   &.with_sidebar {
@@ -162,6 +166,7 @@
 }
 
 #main_content_wrapper {
+
   .member_link {
     margin-right: 10px;
   }
