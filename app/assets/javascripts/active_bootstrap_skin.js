@@ -25,4 +25,16 @@ $(document).ready(function() {
   '
 
   $(html_responsive).insertAfter('#site_title');
+
+
+  $('.dropdown_menu_list_wrapper').contents().unwrap();
+  $('.dropdown_menu').addClass('dropdown');
+  $('.dropdown_menu').addClass('dropdown');
+  $('.dropdown_menu').parent().removeClass('action_item')
+  $('.dropdown_menu > a').each(function(i, obj) {
+      $(obj).replaceWith($('' + this.innerHTML + ''));
+  });
+  $('.dropdown_menu > button').addClass('btn btn-default dropdown-toggle');
+  $('.dropdown_menu > button').attr( "data-toggle", "dropdown");
+  $('.dropdown_menu_list').addClass('dropdown-menu');
 });
