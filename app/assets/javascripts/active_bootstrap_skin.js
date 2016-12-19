@@ -27,14 +27,15 @@ $(document).ready(function() {
   $(html_responsive).insertAfter('#site_title');
 
 
-  $('.dropdown_menu_list_wrapper').contents().unwrap();
-  $('.dropdown_menu').addClass('dropdown');
-  $('.dropdown_menu').addClass('dropdown');
-  $('.dropdown_menu').parent().removeClass('action_item')
-  $('.dropdown_menu > a').each(function(i, obj) {
-      $(obj).replaceWith($('' + this.innerHTML + ''));
+  // Dropdown menus
+  $('.has_nested').addClass('dropdown');
+  $('.has_nested > a').addClass('dropdown-toggle');
+  $('.has_nested > ul').addClass('dropdown-menu');
+  $('.has_nested > a').attr({
+      "data-toggle" : "dropdown",
+      "role" : "button",
+      "aria-haspopup" : "true",
+      "aria-expanded" : "false"
   });
-  $('.dropdown_menu > button').addClass('btn btn-default dropdown-toggle');
-  $('.dropdown_menu > button').attr( "data-toggle", "dropdown");
-  $('.dropdown_menu_list').addClass('dropdown-menu');
+  $('.has_nested > a').append('<span class="caret"></span>');
 });
