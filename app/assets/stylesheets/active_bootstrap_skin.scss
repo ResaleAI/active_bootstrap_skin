@@ -147,7 +147,7 @@
   @extend .row;
 
   &.without_sidebar {
-    #main_content_wrapper { @extend .col-md-6; }
+    #main_content_wrapper { @extend .col-md-12; }
   }
 
   &.with_sidebar {
